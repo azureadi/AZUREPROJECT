@@ -33,15 +33,21 @@ async function handleUpload() {
   const data = await response.json();
 
   // Display results 
-  const resultsHTML = [];
+const resultsHTML = [];
+
 for(let prediction of data.predictions) {
-  const breed = prediction.tagName; 
-  const probability = prediction.probability;
+
+  const breed = prediction.tagName;
   
+  // Calculate percentage
+  const probability = prediction.probability * 100;
+  const percent = probability.toFixed(2);
+
   resultsHTML.push(`
     <p>Breed: ${breed}</p>
-    <p>Probability: ${probability}</p>
-  `);
+    <p>Probability: ${percent}%</p>
+  `); 
+
 }
 
 results.innerHTML = resultsHTML.join('');
