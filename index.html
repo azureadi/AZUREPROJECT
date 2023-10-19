@@ -25,7 +25,7 @@
         padding: 30px;
         border-radius: 15px;
         margin: 50px auto;
-        width: 400px;
+        width: 90%; /* Adjust width for responsiveness */
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     }
 
@@ -49,10 +49,23 @@
 
     #results {
         text-align: center;
-        padding: 30px;
+        padding: 20px;
         margin: 50px auto;
-        width: 80%;
+        width: 90%; /* Adjust width for responsiveness */
+        background-color: white; /* White-colored box for results */
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        #upload-form {
+            width: 90%;
+        }
+        #results {
+            width: 90%;
+        }
+    }
+
 </style>
 </head>
 <body>
